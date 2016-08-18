@@ -9,8 +9,8 @@ WORKDIR /workspace
 RUN apt-get build-dep -y vlc
 RUN apt-get source -y vlc
 
-ADD files/rules workspace/vlc-\*/debian/
-ADD files/vlc-nox.install.in workspace/vlc-\*/debian/
+ADD scripts/compile_vlc.sh /workspace
+ADD files/rules /workspace/
+ADD files/vlc-nox.install.in /workspace/
 
-WORKDIR /workspace/vlc-\*
-RUN debuild -i -us -uc -b
+RUN /workspace/compile_vlc.sh
