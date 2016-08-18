@@ -13,4 +13,5 @@ ADD scripts/compile_vlc.sh /workspace
 ADD files/rules /workspace/
 ADD files/vlc-nox.install.in /workspace/
 
+RUN chmod +x /workspace/compile_vlc.sh
 RUN /workspace/compile_vlc.sh
