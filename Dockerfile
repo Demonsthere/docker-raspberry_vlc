@@ -12,6 +12,6 @@ RUN apt-get source -y vlc
 ADD files/rules workspace/vlc-\*/debian/
 ADD files/vlc-nox.install.in workspace/vlc-\*/debian/
 
-ADD scripts/compile_vlc.sh 
+ADD scripts/compile_vlc.sh /
 
 ENTRYPOINT ["sh", "compile_vlc.sh"] 

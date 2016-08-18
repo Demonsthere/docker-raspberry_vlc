@@ -1,4 +1,4 @@
 #!/bin/bash -x
 
 CONTAINER=$1
-docker run --priviledged -d -v output:/output ${CONTAINER}
+docker run --privileged -d -v output:/output ${CONTAINER}
