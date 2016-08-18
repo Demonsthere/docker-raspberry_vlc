@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ~/vlc_compilation/vlc-*
+cd vlc-*/
 debuild -i -us -uc -b
 mv *.deb /output
