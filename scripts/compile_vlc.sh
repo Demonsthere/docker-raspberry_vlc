@@ -3,5 +3,5 @@ mv rules vlc-*/debian/
 mv vlc-nox.install.in vlc-*/debian
 
 cd vlc-*/
-debuild -i -us -uc -b
+/usr/bin/debuild -i -us -uc -b
 mv *.deb /output

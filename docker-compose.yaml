@@ -1,0 +1,10 @@
+---
+version: '3'
+services:
+  vlc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vlc_compiler
+    volumes:
+      - "./output:/output"
